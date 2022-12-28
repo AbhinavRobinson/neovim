@@ -64,4 +64,7 @@ return require('packer').startup(function(use)
             {'rafamadriz/friendly-snippets'},
         }
     }
+
+    -- Devicons
+    use 'nvim-tree/nvim-web-devicons'
 end)
