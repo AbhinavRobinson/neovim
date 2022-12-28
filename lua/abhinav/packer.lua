@@ -18,12 +18,12 @@ return require('packer').startup(function(use)
         end,
     }
 
-    -- Rose pine theme
+    -- Catppuccin theme
     use {
-       'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
+        "catppuccin/nvim",
+        as = "catppuccin",
+        config = function ()
+            vim.cmd('colorscheme catppuccin')
         end
     }
 
