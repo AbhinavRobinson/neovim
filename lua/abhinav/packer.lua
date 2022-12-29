@@ -9,6 +9,9 @@ return require('packer').startup(function(use)
     -- Lazygit
     use 'kdheepak/lazygit.nvim'
 
+    -- File Browser
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
     -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
