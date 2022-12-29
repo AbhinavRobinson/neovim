@@ -15,6 +15,14 @@ return require('packer').startup(function(use)
     requires = {
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
+    tag = 'nightly',
+    config = function()
+      require("nvim-tree").setup {
+        update_focused_file = {
+          enable = true,
+        }
+      }
+    end
   }
 
   -- Telescope
@@ -26,7 +34,7 @@ return require('packer').startup(function(use)
     end,
   }
 
-  -- Catppuccin theme
+  -- Theme
   use {
     "folke/tokyonight.nvim",
     as = "tokyonight",
@@ -75,4 +83,19 @@ return require('packer').startup(function(use)
 
   -- Devicons
   use 'nvim-tree/nvim-web-devicons'
+
+  -- Bufferline
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require("bufferline").setup {}
+    end
+  }
+
+  -- Feline
+  use {
+    'feline-nvim/feline.nvim',
+  }
 end)
