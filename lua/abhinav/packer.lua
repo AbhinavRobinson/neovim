@@ -1,4 +1,3 @@
--- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -40,7 +39,8 @@ return require('packer').startup(function(use)
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' }, { "kdheepak/lazygit.nvim" }, { "nvim-telescope/telescope-file-browser.nvim" } },
+    requires = { { 'nvim-lua/plenary.nvim' }, { "kdheepak/lazygit.nvim" },
+      { "nvim-telescope/telescope-file-browser.nvim" } },
     config = function()
       require("telescope").load_extension "lazygit"
       require("telescope").load_extension "file_browser"
@@ -49,10 +49,10 @@ return require('packer').startup(function(use)
 
   -- Theme
   use {
-    "nyoom-engineering/oxocarbon.nvim",
-    as = "oxocarbon",
+    "EdenEast/nightfox.nvim",
+    as = "nightfox",
     config = function()
-      vim.cmd('colorscheme oxocarbon')
+      vim.cmd('colorscheme carbonfox')
     end
   }
 
