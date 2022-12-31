@@ -36,10 +36,10 @@ return require('packer').startup(function(use)
 
   -- theme
   use {
-    "folke/tokyonight.nvim",
-    as = "tokyonight",
+    "nyoom-engineering/oxocarbon.nvim",
+    as = "oxocarbon",
     config = function()
-      vim.cmd('colorscheme tokyonight-night')
+      vim.cmd('colorscheme oxocarbon')
     end
   }
 
