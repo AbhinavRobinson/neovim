@@ -4,6 +4,12 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- Startup
+  use {
+    'echasnovski/mini.starter',
+    requires = { "echasnovski/mini.sessions" }
+  }
+
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
 
@@ -34,9 +40,10 @@ return require('packer').startup(function(use)
   -- Telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' }, { "kdheepak/lazygit.nvim" } },
+    requires = { { 'nvim-lua/plenary.nvim' }, { "kdheepak/lazygit.nvim" }, { "nvim-telescope/telescope-file-browser.nvim" } },
     config = function()
-      require("telescope").load_extension("lazygit")
+      require("telescope").load_extension "lazygit"
+      require("telescope").load_extension "file_browser"
     end,
   }
 
