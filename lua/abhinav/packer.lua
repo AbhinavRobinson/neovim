@@ -1,5 +1,3 @@
--- This file can be loaded by calling `lua require('plugins')` from your init.vim
-
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
@@ -8,6 +6,14 @@ return require('packer').startup(function(use)
 
   -- Lazygit
   use 'kdheepak/lazygit.nvim'
+
+  -- GitSigns
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- File Browser
   use {
@@ -34,7 +40,7 @@ return require('packer').startup(function(use)
     end,
   }
 
-  -- theme
+  -- Theme
   use {
     "nyoom-engineering/oxocarbon.nvim",
     as = "oxocarbon",
