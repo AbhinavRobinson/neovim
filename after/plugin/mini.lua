@@ -5,17 +5,18 @@ local header_art =
  ╯╰╯╰─╯╰─╯ ╰╯ ┴┴ ┴
 ]]
 
+-- !TODO
 -- using the mini plugins
-require('mini.sessions').setup({
-  -- Whether to read latest session if Neovim opened without file arguments
-  autoread = false,
-  -- Whether to write current session before quitting Neovim
-  autowrite = false,
-  -- Directory where global sessions are stored (use `''` to disable)
-  directory = '~/.config/nvim/sessions', --<"session" subdir of user data directory from |stdpath()|>,
-  -- File for local session (use `''` to disable)
-  file = '' -- 'Session.vim',
-})
+-- require('mini.sessions').setup({
+--   -- Whether to read latest session if Neovim opened without file arguments
+--   autoread = false,
+--   -- Whether to write current session before quitting Neovim
+--   autowrite = false,
+--   -- Directory where global sessions are stored (use `''` to disable)
+--   directory = '~/.config/nvim/session', --<"session" subdir of user data directory from |stdpath()|>,
+--   -- File for local session (use `''` to disable)
+--   file = '' -- 'Session.vim',
+-- })
 
 local starter = require('mini.starter')
 
