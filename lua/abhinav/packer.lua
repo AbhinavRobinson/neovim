@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     end,
   }
 
-  -- Theme
+  -- theme
   use {
     "folke/tokyonight.nvim",
     as = "tokyonight",
@@ -57,6 +57,12 @@ return require('packer').startup(function(use)
 
   -- Harpoon
   use('theprimeagen/harpoon')
+
+  -- Null LS
+  use 'jose-elias-alvarez/null-ls.nvim'
+
+  -- Prettier
+  use('MunifTanjim/prettier.nvim')
 
   -- LSP
   use {
