@@ -117,4 +117,7 @@ return require('packer').startup(function(use)
   use {
     'feline-nvim/feline.nvim',
   }
+
+  -- Terminal
+  use "numToStr/FTerm.nvim"
 end)
